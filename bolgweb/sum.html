@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/bootstrap-switch.min.css" />
+	<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-switch.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+        $(document).ready(function(){
+            //基本初始化
+            $('#sw-content input').bootstrapSwitch();
+			$('#sw-content input').bootstrapSwitch("size","mini");
+			$('#sw-content input').bootstrapSwitch("onText","启动");
+			$('#sw-content input').bootstrapSwitch("offText","关闭");
+//			$('#sw-content input').bootstrapSwitch("handleWidth","10px");
+			$('#sw-content input').bootstrapSwitch("labelWidth","10px");
+	
+            //手动设置按钮状态
+            $('#sw-content input').bootstrapSwitch('state',false);
+
+            //点击按钮切换 switch
+            $('#oper-btn-sw').click(function(){
+                $('#sw-content input').bootstrapSwitch('toggleState');
+            });
+
+            //点击触发事件，监听按钮状态
+            $('#sw-content input').on('switchChange.bootstrapSwitch',function(event,state){
+
+            //内置对象、内置属性
+            console.log(event); 
+
+            //获取状态
+            console.log(state); 
+            alert(state)
+        });  
+        })
+
+    </script>
+
+	<body  style="background-color: #ECEFF4;">
+	
+	<nav class="navbar navbar-default" role="navigation"  style="background-color: #4f8cB8;" >
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#" style="color: white;">后台管理程序</a>
+    </div>
+
+    
+    <div>
+        <form class="navbar-form navbar-left" role="search" style="padding-left: 58%;margin: 0px;">
+         	 <div class="input-group">
+                <input type="text" class="form-control"   placeholder="搜索一下" />
+                <span class="input-group-btn">
+                    <button class="btn btn-primary">
+                    	<span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <div>
+        	<p class="navbar-text" style="color: white;">欢迎用户<a href="#" style="color: #000000;">zss</a>登入</p>
+    	</div>
+    	 <div>
+        	<p class="navbar-text"><a href="#" style="color: #000000;">消息<span class="badge">21</span></a></p>
+    	</div>
+    	
+    	<div>
+        	<p class="navbar-text">
+        		<ul class="nav navbar-nav">
+        
+            <li class="dropdown" style="color: white;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white;">
+                    	查看更多 <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">查看登入记录</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">更改用户信息</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">退出登入</a></li>
+                </ul>
+            </li>
+        </ul>
+        	</p>
+    	</div>
+  
+    </div>
+    </div>
+    
+</nav>
+
+	<ul class="nav nav-pills nav-stacked" style="width: 310px ;color: white; margin-bottom: 50px;display: inline-block; position: absolute;top: 61px;background-color: #000000;height:890px;">
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		 var day2 = new Date();
+ day2.setTime(day2.getTime());
+  var s2 = day2.getFullYear()+"年" + (day2.getMonth()+1) + "月" + day2.getDate()+"日";
+
+  $("#data1").html(s2);
+	})
+</script>
+
+
+
+
+  <li style="">
+  	
+  	<ul class="breadcrumb">
+    <li><a href="#" class="glyphicon glyphicon-home">首页控制台</a></li>
+	<li><a href="#" id="data1"></a></li>
+
+	</ul>
+  	
+  </li>
+  		<img src="img/u=3268903448,440145817&fm=26&gp=0.jpg" class="img-circle" style="width: 72px;height: 56px;margin-left: 15px;"><div style="display: inline-block;margin-left: 15px;" >
+  	
+  			
+  			<span  style="position: relative;top: 10px;font-size: 1.1em;">	zss</span><br />
+  			<samp class="glyphicon glyphicon-zoom-in" style="font-size: 0.8em;position: relative;top: 10px;">个人资料</samp>
+  		</div>  
+  <hr />
+  
+  
+  
+  	</p>
+
+
+  <li ><a href="#"  style="color: white;"><span  class="glyphicon glyphicon-user"></span>社交管理</a></li>
+	</p>
+
+
+  <li ><a href="#"  style="color: white;"><span class="glyphicon glyphicon-envelope"></span>查看信息</a></li>
+ 
+
+    </p>
+  <li><a href="#" style="color: white;"><span class="	glyphicon glyphicon-search"></span> 查看日志</a></li> 
+      </p>
+  <li><a href="#" style="color: white;"><span class="glyphicon glyphicon-file">文章管理</a></li> 
+       </p>
+  <li><a href="#" style="color: white;"><span class="	glyphicon glyphicon-picture">照片管理</a></li> 
+  <hr />
+    </p>
+  <li><a href="#"style="color: white;"><span class="		glyphicon glyphicon-th-large"></span>主题栏目</a></li> 
+    </p>
+  <li><a href="#"style="color: white;"><span class="	glyphicon glyphicon-globe"></span>用户管理</a></li> 
+    </p>
+  <li><a href="#"style="color: white;"><span class="	glyphicon glyphicon-link"></span>友情链接</a></li> 
+     </p>
+  <li><a href="#"style="color: white;"><span class="	glyphicon glyphicon-book"></span>词典管理</a></li> 
+       </p>
+  <li><a href="#"style="color: white;"><span class="		glyphicon glyphicon-comment"></span>公告管理</a></li> 
+  <hr />
+      
+  <li><a href="#" style="color: white;"><span class="	glyphicon glyphicon-leaf"></span>权限控制</a></li> 
+  
+  
+	</ul>
+	
+	
+	<div class="container" style="display: inline-block; position: absolute;top: 61px;left: 310px;width: 84%;" >
+   <div class="row" >
+      <div class="col-xl-12 " style="display: inline-block; padding-left: 30px; "><h4  style="display: inline-block;"><b>控制台</b></h4>
+      	
+     <!--<div id="sw-content" style="display: inline-block;padding-left: 20px;font-size: 0.9em; ">登入信息
+    <input type="checkbox"   class="make-switch" checked data-on-color="default" data-off-color="primary"   >
+	</div>
+	
+	 <div id="sw-content" style="display: inline-block;padding-left: 20px;font-size: 0.9em;">文章信息
+    <input type="checkbox"   class="make-switch" checked data-on-color="default" data-off-color="primary"   >
+	</div>
+	
+	
+	<div id="sw-content" style="display: inline-block;padding-left: 20px;font-size: 0.9em;">消息信息
+    	<input type="checkbox"   class="make-switch" checked data-on-color="default" data-off-color="primary"   >
+	</div>
+	
+	
+	<div id="sw-content" style="display: inline-block;padding-left: 20px;font-size: 0.9em;">日志信息
+    	<input type="checkbox"   class="make-switch" checked data-on-color="default" data-off-color="primary"   >
+	</div>
+	
+	<div id="sw-content" style="display: inline-block;padding-left: 20px;font-size: 0.9em;">获取数据分析图表
+    	<input type="checkbox"   class="make-switch" checked data-on-color="default" data-off-color="primary"   >
+	</div>-->
+
+      	
+      </div>
+        
+   </div>
+   <div class="row" style="margin-top: 20PX; ">
+   	<div class="col-xl-12" >
+   		
+   		<div class="panel panel-warning" style="display: inline-block; margin-left: 10%; width: 256px;" >
+    <div class="panel-heading">
+        <h3 class="panel-title">发表文章数</h3>
+    </div>
+    <div class="panel-body">
+        	<a href="#">你已经累计发表100篇文章，希望你再接再接。</a>
+    </div>
+	</div>
+	<div class="panel panel-danger" style="display: inline-block;margin-left: 4%;width: 256px;">
+    <div class="panel-heading">
+        <h3 class="panel-title">浏览量</h3>
+    </div>
+    <div class="panel-body">
+      	<a href="#">您的文章累计已经吸引8000人浏览，感谢你的分享。</a>
+    </div>
+   		
+   	</div>
+   	
+
+<div class="panel panel-success" style="display: inline-block;margin-left: 4%;width: 256px;">
+    <div class="panel-heading">
+        <h3 class="panel-title">评论和留言数</h3>
+    </div>
+    <div class="panel-body">
+     	<a href="#">共有8000人在你的文章评论言或者留言</a>
+    </div>
+</div>
+<div class="panel panel-info" style="display: inline-block;margin-left: 4%;width: 256px;">
+    <div class="panel-heading">
+        <h3 class="panel-title">粉丝和关注</h3>
+    </div>
+    <div class="panel-body">
+        <a href="#">你已经吸引了80个人的工作你累计关注了80</a>
+    </div>
+</div>
+   	
+   </div>
+   
+   <div class="row">
+   		<div  style="background-color: white;margin-left: 176px;width: 585px; display: inline-block;">
+   			<table class="table table-striped">
+  <caption>登入者基本信息</caption>
+
+  <tbody>
+
+     
+      <td>账户号:</td>
+      <td>400003</td></tr>
+    <tr>
+      <td>登入时间:</td>
+      <td>411027</td>
+    </tr>
+ 
+     <tr>
+      <td>浏览器:</td>
+      <td>411027</td>
+    </tr>
+    <tr>
+      <td>    管理员看见的</td>
+      <td>411027</td>
+    </tr>
+
+     <tr>
+      <td>当前在线人数:</td>
+      <td>411027</td>
+    </tr>
+    <tr>
+      <td>软件累计使用人数</td>
+      <td>411027</td>
+    </tr>
+     <tr>
+      <td><a href="#">点击获取该软件信息</a></td>
+      <td></td>
+    </tr
+
+  
+  </tbody>
+</table>
+   		</div>
+   		<div  style="background-color: white;margin-left: 61px;width: 585px;  display: inline-block; margin-bottom: 107px;">
+   			<table class="table table-bordered">
+  <caption>最近文章</caption>
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>状态</th>
+      <th>时间</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tanmay</td>
+      <td>Bangalore</td>
+      <td>560001</td>
+    </tr>
+    <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+      <td>400003</td>
+    </tr>
+    <tr>
+      <td>Uma</td>
+      <td>Pune</td>
+      <td>411027</td>
+    </tr>
+  </tbody>
+</table>
+   		</div>
+   		
+   		   		<div  style="background-color: white;margin-left: 175px;width: 585px;  display: inline-block;margin-top: 30px;">
+   			<table class="table table-bordered">
+  <caption>最近文章</caption>
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>状态</th>
+      <th>时间</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tanmay</td>
+      <td>Bangalore</td>
+      <td>560001</td>
+    </tr>
+    <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+      <td>400003</td>
+    </tr>
+    <tr>
+      <td>Uma</td>
+      <td>Pune</td>
+      <td>411027</td>
+    </tr>
+  </tbody>
+</table>
+   		</div>
+   		
+   		
+   		   		   		<div  style="background-color: white;margin-left: 61px;width: 585px;  display: inline-block;">
+   			<table class="table table-bordered">
+  <caption>最近文章</caption>
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>状态</th>
+      <th>时间</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tanmay</td>
+      <td>Bangalore</td>
+      <td>560001</td>
+    </tr>
+    <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+      <td>400003</td>
+    </tr>
+    <tr>
+      <td>Uma</td>
+      <td>Pune</td>
+      <td>411027</td>
+    </tr>
+  </tbody>
+</table>
+   		</div>
+   		
+   		
+   </div>
+   
+   
+   
+   
+
+		</div>
+</html>
